@@ -8,14 +8,15 @@ public class Person {
     private String gentle;
     private String birthday;
     private String email;
-    public Person(String name, String phoneNum, String address, String facebook,String gentle,String birthday,String email) {
+
+    public Person(String name, String phoneNum, String address, String facebook, String gentle, String birthday, String email) {
         this.name = name;
         this.phoneNum = phoneNum;
         this.address = address;
         this.facebook = facebook;
-        this.gentle =gentle;
-        this.birthday=birthday;
-        this.email=email;
+        this.gentle = gentle;
+        this.birthday = birthday;
+        this.email = email;
     }
 
     public Person() {

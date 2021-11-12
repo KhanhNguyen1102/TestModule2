@@ -50,13 +50,13 @@ public class PhoneBookManager implements GeneralService<PhoneBook> {
             Scanner scanner1 = new Scanner(System.in);
             System.out.println("Đã tìm thấy danh bạ, điền y để xóa");
             String input = scanner1.nextLine();
-            if (input.equals("y")){
+            if (input.equals("y")) {
                 phoneBooks.remove(indexToRemove);
                 System.out.println("Xóa thành công");
                 Menu.app();
             }
 
-        } else{
+        } else {
             System.out.println("Không tìm thấy số điện thoại này trong danh bạ");
             Scanner scanner = new Scanner(System.in);
             System.out.println("Điền số điện thoại cần xóa");

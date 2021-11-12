@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Get_Save_Information {
-    public static void saveInformation(ArrayList<PhoneBook> list, String filePath) {
+    public static void saveInformation(String filePath) {
         try {
             File file = new File(filePath);
             FileWriter fw = new FileWriter(file);
@@ -30,17 +30,18 @@ public class Get_Save_Information {
             e.printStackTrace();
         }
     }
-    public static void GetInformation(ArrayList<PhoneBook> list,String filePath){
+
+    public static void GetInformation(ArrayList<PhoneBook> list, String filePath) {
         try {
-           File file = new File(filePath);
-           FileReader fr= new FileReader(file);
-           BufferedReader br= new BufferedReader(fr);
-           String line=br.readLine();
-           while ((line=br.readLine())!=null){
-               String[] str = line.split(",");
-               PhoneBook phoneBook = new PhoneBook(str[0],str[1],str[2],str[3],str[4],str[5],str[6],str[7]);
-               PhoneBookManager.getInstance().getPhoneBooks().add(phoneBook);
-           }
+            File file = new File(filePath);
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+            while ((line = br.readLine()) != null) {
+                String[] str = line.split(",");
+                PhoneBook phoneBook = new PhoneBook(str[0], str[1], str[2], str[3], str[4], str[5], str[6], str[7]);
+                PhoneBookManager.getInstance().getPhoneBooks().add(phoneBook);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

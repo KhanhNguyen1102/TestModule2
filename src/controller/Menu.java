@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Menu {
     public static void showMenu() {
 
-        System.out.println( "----CHƯƠNG TRÌNH QUẢN LÝ DANH BẠ----");
-        System.out.println( "Chọn chức năng theo số (để tiếp tục)");
+        System.out.println("----CHƯƠNG TRÌNH QUẢN LÝ DANH BẠ----");
+        System.out.println("Chọn chức năng theo số (để tiếp tục)");
         System.out.println("1. Xem danh sách ");
         System.out.println("2. Thêm mới");
         System.out.println("3. Cập nhật");
@@ -21,6 +21,7 @@ public class Menu {
 
 
     }
+
     public static void app() {
         int choice = -1;
         showMenu();
@@ -33,11 +34,12 @@ public class Menu {
                 input.nextLine();
                 choice = -1;
 
-            }finally {
+            } finally {
                 doChoice(choice);
             }
         } while (true);
     }
+
     public static void doChoice(int choice) {
         switch (choice) {
             case 1 -> {
@@ -63,24 +65,21 @@ public class Menu {
                 showMenu();
             }
 
-            case 5 -> {
-                SubMenu.app();
-            }
+            case 5 -> SubMenu.app();
+
             case 6 -> {
                 Get_Save_Information.GetInformation(PhoneBookManager.getInstance().getPhoneBooks(), "contacts.csv");
                 showMenu();
             }
             case 7 -> {
-                Get_Save_Information.saveInformation(PhoneBookManager.getInstance().getPhoneBooks(), "contacts.csv");
+                Get_Save_Information.saveInformation("contacts.csv");
                 showMenu();
             }
-            case 8 -> {
-                System.exit(0);
-            }
-            default -> {
-                System.err.println("Lựa chọn ko hợp lệ nha");
+            case 8 -> System.exit(0);
 
-            }
+            default -> System.err.println("Lựa chọn ko hợp lệ nha");
+
+
         }
     }
 

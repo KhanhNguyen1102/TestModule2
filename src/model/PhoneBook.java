@@ -1,13 +1,14 @@
 package model;
 
-public class PhoneBook extends Person{
+public class PhoneBook extends Person {
     private String group;
-    public PhoneBook(String name, String phoneNum, String address, String facebook,String gentle,String birthday,String email) {
-        super(name, phoneNum, address, facebook,gentle,birthday,email);
+
+    public PhoneBook(String name, String phoneNum, String address, String facebook, String gentle, String birthday, String email) {
+        super(name, phoneNum, address, facebook, gentle, birthday, email);
     }
 
-    public PhoneBook(String name, String phoneNum, String address, String facebook, String gentle, String group,String birthday,String email) {
-        super(name, phoneNum, address, facebook, gentle,birthday,email);
+    public PhoneBook(String name, String phoneNum, String address, String facebook, String gentle, String group, String birthday, String email) {
+        super(name, phoneNum, address, facebook, gentle, birthday, email);
         this.group = group;
     }
 
@@ -28,13 +29,13 @@ public class PhoneBook extends Person{
 
     @Override
     public String toString() {
-        return  "name=" + this.getName() +
+        return "name=" + this.getName() +
                 ", phoneNum=" + this.getPhoneNum() +
                 ", address=" + this.getAddress() +
                 ", facebook=" + this.getFacebook() +
                 ", gentle=" + this.getGentle() +
-                ", birthday=" + this.getBirthday()+
-                ", email=" +this.getEmail()+
-                ",group=" + group ;
+                ", birthday=" + this.getBirthday() +
+                ", email=" + this.getEmail() +
+                ",group=" + group;
     }
 }
